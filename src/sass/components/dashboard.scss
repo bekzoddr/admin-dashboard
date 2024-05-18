@@ -1,0 +1,53 @@
+.dashboard{
+    display: flex;
+    flex-direction: column;
+    width: 255px;
+    height: 1100px;
+    padding: 23px 0;
+    background: rgb(54, 55, 64);
+    position: fixed;
+    z-index: 11111111;
+    .logo{
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        margin: 23px 20px 55px 23px;
+        h2{
+            color: rgb(164, 166, 179);
+            font-size: 19px;
+            font-weight: 700;
+            line-height: -1px;
+            letter-spacing: 0.4px;
+            text-align: left;
+        }
+    }
+    .routes{
+        display: flex;
+        flex-direction: column;
+        .route{
+            display: flex;
+            align-items: center;
+            padding: 18px 24px;
+            gap: 27px;
+            &:hover{
+                background: rgb(159, 162, 180);
+                h2{
+                    color:#fff;
+                }
+            }
+            h2{
+                color: rgb(164, 166, 179);
+                font-size: 16px;
+                font-weight: 400;
+                line-height: -1px;
+                letter-spacing: 0.2px;
+                text-align: left;
+            }
+        }
+    }
+}
+.line{
+    border: 1px solid rgb(223, 224, 235);
+    width: 255px;
+    height:0ch;
+}
