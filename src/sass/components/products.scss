@@ -133,3 +133,12 @@ a.active{
 .datess{
     margin-left: 100px;
 }
+.modal{
+    .modal__box{
+        margin-left: 150px !important;
+    }
+    button{
+        margin-top: 5px;
+        background-color: green;
+    }
+}
