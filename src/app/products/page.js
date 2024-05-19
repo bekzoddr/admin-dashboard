@@ -17,7 +17,6 @@ const Products = async () => {
   return (
     <Container maxWidth="xl">
       <div className="products">
-        <Menu />
         <ProductWrapper data={data} />
       </div>
     </Container>

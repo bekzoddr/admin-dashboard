@@ -1,5 +1,6 @@
+"use client";
+import React, { useState } from "react";
 import Image from "next/image";
-import React from "react";
 import logo from "@/assets/images/Logo.svg";
 import icon1 from "@/assets/images/icon1.svg";
 import icon2 from "@/assets/images/icon2.svg";
@@ -8,13 +9,24 @@ import icon4 from "@/assets/images/icon4.svg";
 import icon5 from "@/assets/images/icon5.svg";
 import icon6 from "@/assets/images/icon6.svg";
 import Link from "next/link";
+import Menu from "@/components/menu/Menu";
+
 const Dashboard = () => {
+  const [isClassActive, setIsClassActive] = useState(false);
+
+  const toggleDashboardClass = () => {
+    setIsClassActive(!isClassActive);
+  };
+
   return (
-    <div className="dashboard">
-      <div className="logo">
-        <Image src={logo} alt="logo" />
-        <h2>Dashboard</h2>
-      </div>
+    <div className={`dashboard ${isClassActive ? "active" : ""}`}>
+      <Menu toggleDashboardClass={toggleDashboardClass} />
+      <Link href="/">
+        <div className="logo">
+          <Image src={logo} alt="logo" />
+          <h2>Dashboard</h2>
+        </div>
+      </Link>
       <div className="routes">
         <Link href="/products">
           <div className="route">
